@@ -125,7 +125,7 @@ import React from 'react';
 class NavBar extends React.Component {
 	render() {
 		return <div>
-			<nav className="navbar navbar-inverse">
+			<nav className="navbar navbar-default">
 				<div className="container-fluid">
 					<div className="navbar-header">
 						<a className="navbar-brand" href="#">react-bootstrap</a>
@@ -150,3 +150,26 @@ export default NavBar;
 $ npm start
 ```
 lalu buka web browser dengan alamat `localhost:8080`. Jika anda melihat navbar di web browser, berarti anda sudah sukses menggunakan `react` dan `bootstrap`. Anda tinggal membuat komponen lainnya, untuk nanti digabungkan kedalam `index.js`.
+
+### Import beberapa komponen yang telah anda buat sebelumnya kedalam file `index.js` :
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/app.css';
+
+import NavBar from './components/NavBar';
+import Header from './components/Header';
+import Content from './components/Content';
+
+ReactDOM.render(
+	<div>
+		<NavBar />
+		<Header />
+		<Content />
+	</div>,
+	document.getElementById('root')
+);```
+
+# Done!
