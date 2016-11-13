@@ -170,6 +170,7 @@ ReactDOM.render(
 		<Content />
 	</div>,
 	document.getElementById('root')
-);```
+);
+```
 
 # Done!
